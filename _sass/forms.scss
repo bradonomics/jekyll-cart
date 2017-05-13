@@ -1,0 +1,81 @@
+/* Forms
+-------------------------------------------------- */
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+  font-size: 16px;
+  color: $secondary-color;
+  background-color: #fff;
+}
+
+textarea,
+input[type='password'],
+input[type='url'],
+input[type='text'],
+input[type='search'],
+input[type='email'] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  width: auto;
+  margin-right: 10px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: $primary-color;
+  outline: none;
+  -webkit-transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+      -ms-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+
+.input-large {
+  padding: 15px;
+  font-size: 24px;
+}
+
+select.input-large {
+  height: 54px;
+  padding-top: 12px;
+  line-height: 54px;
+}
+
+.input-small {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+::-moz-placeholder {
+  color: #d8d8d8;
+  opacity: 1;
+}
+
+::-webkit-input-placeholder {
+  color: #d8d8d8;
+}
+
+input:focus::-webkit-input-placeholder,
+input:focus::-moz-placeholder,
+input:focus:-ms-input-placeholder,
+textarea:focus::-webkit-input-placeholder,
+textarea:focus::-moz-placeholder,
+textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+label {
+  font-weight: 700;
+}

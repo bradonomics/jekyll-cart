@@ -1,0 +1,64 @@
+/* Site Header
+-------------------------------------------------- */
+
+.site-header {
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+  @media (min-width: 800px) {
+    padding: 60px 0 50px;
+  }
+}
+
+.title-area {
+  float: left;
+  margin-top: 10px;
+  @media (min-width: 800px) {
+    margin-top: 12px;
+  }
+}
+
+.site-title {
+  margin: 0 auto;
+  font-family: $tertiary-font-family;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-transform: none;
+
+  a {
+    text-decoration: none;
+    color: $secondary-color;
+  }
+
+}
+
+.header-image {
+
+  .nav-primary:not(button) {
+    margin-top: 22px;
+  }
+
+  .site-title {
+    display: block;
+    text-indent: -9999px;
+    @media (min-width: 800px) {
+      margin-top: 5px;
+    }
+
+    > a {
+      float: left;
+      width: 200px;
+      min-height: 75px;
+      background-position: center center !important;
+      background-size: contain !important;
+    }
+
+  }
+
+  .title-area {
+    width: 200px;
+    margin: 0;
+  }
+
+}

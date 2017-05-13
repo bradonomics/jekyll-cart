@@ -1,0 +1,24 @@
+{
+  "name": "jekyll-cart",
+  "version": "0.1.0",
+  "description": "A Jekyll based shopping cart built with simpleCart(js).",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradonomics/jekyll-cart.git"
+  },
+  "author": "Brad West",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/bradonomics/jekyll-cart/issues"
+  },
+  "homepage": "https://github.com/bradonomics/jekyll-cart#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-shell": "^0.6.3",
+    "gulp-uglify": "^2.1.2"
+  }
+}

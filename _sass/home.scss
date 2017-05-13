@@ -1,0 +1,36 @@
+.styles {
+  margin-bottom: 40px;
+
+  &:nth-child(3n+4) {
+    margin-left: 0;
+  }
+
+  .product-details {
+    float: none;
+    width: 100%;
+  }
+
+}
+
+.product-name {
+  float: left;
+  width: 70%;
+  margin-top: 7px;
+
+  h4 {
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+
+}
+
+.product-price {
+  float: right;
+  width: 30%;
+  text-align: right;
+
+  p {
+    margin-bottom: 0;
+  }
+
+}

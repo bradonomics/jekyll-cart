@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="site-inner">
+  <div class="wrap">
+    <div class="content-sidebar-wrap">
+
+      <main class="content">
+        <article class="page entry" itemscope itemtype="http://schema.org/CreativeWork">
+
+          <header class="entry-header">
+            <h1 class="entry-title" itemprop="headline">{{ page.title }}</h1>
+          </header>
+
+          <div class="entry-content" itemprop="text">
+            {{ content }}
+          </div>
+
+        </article>
+      </main>
+
+      {% if page.sidebar_option == 'sidebar' %}{% include sidebar.html %}{% endif %}
+
+    </div>
+  </div>
+</div>

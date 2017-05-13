@@ -1,0 +1,134 @@
+body {
+  font-family: $primary-font-family;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.612;
+  color: $secondary-color;
+  background-color: #fff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @media (min-width: 1000px) {
+    font-size: 18px;
+  }
+}
+
+p {
+  margin: 0 0 1.625em;
+  padding: 0;
+}
+
+blockquote {
+  margin: 2em 0;
+  padding-left: 2em;
+  border-left: 8px solid $secondary-color;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 200;
+
+  p:last-of-type {
+    margin: 0;
+  }
+
+}
+
+cite {
+  font-style: normal;
+}
+
+
+/* Links
+-------------------------------------------------- */
+
+a {
+  // border-bottom: 1px solid;
+  outline: 0;
+  // text-decoration: none;
+  color: $primary-color;
+
+  // &:hover {
+  //   border-color: transparent;
+  // }
+
+}
+
+
+/* Lists
+-------------------------------------------------- */
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul.serif-list {
+  margin-bottom: 40px;
+  font-family: $tertiary-font-family;
+  font-size: 25px;
+}
+
+ul.serif-list li {
+  margin-bottom: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+
+/* Selection
+-------------------------------------------------- */
+
+::-moz-selection {
+  color: #fff;
+  background-color: $primary-color;
+}
+
+::selection {
+  color: #fff;
+  background-color: $primary-color;
+}
+
+/* Utilities
+-------------------------------------------------- */
+
+.text-center {
+  text-align: center;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.display-none {
+  display: none;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0;
+}
+
+.mobile-hide {
+  display: none;
+  position: absolute;
+  visibility: hidden;
+  clip: rect(0, 0, 0, 0);
+  @media (min-width: 800px) {
+    display: inherit;
+    position: relative;
+    visibility: visible;
+  }
+}
+
+.mobile-show {
+  @media (min-width: 800px) {
+    position: absolute;
+    visibility: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+}

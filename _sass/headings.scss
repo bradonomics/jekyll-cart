@@ -1,0 +1,68 @@
+h1,
+h3,
+h4,
+h5 {
+  margin: 0 0 1.612rem;
+  font-family: $secondary-font-family;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
+h1 {
+  font-size: 40px;
+  @media (min-width: 1000px) {
+    font-size: 90px;
+  }
+}
+
+
+h2 {
+  margin: 0 0 1.612rem;
+  font-family: $tertiary-font-family;
+  font-size: 30px;
+  font-weight: 200;
+  line-height: 1.612em;
+  @media (min-width: 1000px) {
+    font-size: 40px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
+h3 {
+  font-size: 32px;
+  @media (min-width: 1000px) {
+    font-size: 50px;
+  }
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+
+  a {
+    text-decoration: none;
+  }
+
+}

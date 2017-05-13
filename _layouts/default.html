@@ -1,0 +1,43 @@
+---
+layout: compress
+---
+
+<!doctype html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body {% if page.url == '/' %}class="home{% if page.sidebar_option != 'sidebar' %} full-width-content{% endif %}" {% elsif page.url contains '/blog/' or page.layout == 'archive' %}class="archive full-width-content" {% elsif page.url contains '/products/' %}class="product" {% elsif page.sidebar_option != 'sidebar' %}class="full-width-content" {% endif %}itemscope itemtype="http://schema.org/WebPage">
+
+    <div class="site-container">
+
+      <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+      <![endif]-->
+
+      {% include header.html %}
+
+      {{ content }}
+
+      {% include footer-widgets.html %}
+      {% include footer.html %}
+
+    </div>
+
+    <script src="{{ site.url }}/js/jquery-2.2.4.min.js"></script>
+    <script src="{{ site.url }}/js/simpleCart.js"></script>
+    <script async src="{{ site.url }}/js/main.js"></script>
+    <script async src="{{ site.url }}/js/responsive-menu.js"></script>
+
+    {% if page.url contains '/products/' %}
+      <script async src="{{ site.url }}/js/style-picker.js"></script>
+      <script async src="{{ site.url }}/js/add-to-cart.js"></script>
+    {% endif %}
+
+    {% if page.url == '/checkout/' %}
+      <script async src="{{ site.url }}/js/checkout.js"></script>
+    {% endif %}
+
+  </body>
+
+</html>

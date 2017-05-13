@@ -1,0 +1,50 @@
+/* Pagination
+-------------------------------------------------- */
+
+.pagination {
+  margin-top: 40px;
+  text-align: center;
+
+  ul {
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  li {
+    display: block;
+    float: left;
+    margin: 2px;
+    border-radius: 2px;
+    overflow: hidden;
+    list-style-type: none;
+
+    a {
+    display: block;
+    padding: 8px 16px;
+    border: 0;
+    text-decoration: none;
+    }
+
+    a:hover {
+      border-bottom: 0;
+      color: #fff;
+      background: $primary-color;
+    }
+
+    &.active {
+      display: block;
+      float: left;
+      margin: 2px;
+      padding: 8px 16px;
+      border: 0;
+      border-radius: 2px;
+      text-decoration: none;
+      color: #fff;
+      background: $primary-color;
+      overflow: hidden;
+      list-style-type: none;
+    }
+
+  }
+
+}

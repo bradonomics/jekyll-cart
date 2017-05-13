@@ -1,0 +1,33 @@
+.archive-description {
+  margin-bottom: 120px;
+
+  p {
+    display: block;
+    font-family: $tertiary-font-family;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 2;
+    @media only screen and (min-width: 1024px) {
+      font-size: 25px;
+    }
+  }
+
+}
+
+.archive .entry-content > a {
+  border: 0;
+}
+
+.archive .has-post-thumbnail .entry-content > a {
+  border: 0;
+}
+
+.archive .entry-title {
+  margin-bottom: 1rem;
+  font-size: 40px;
+}
+
+.archive .entry {
+  position: relative;
+  margin-bottom: 40px;
+}

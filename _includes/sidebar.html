@@ -1,0 +1,14 @@
+<aside class="sidebar" role="complementary" aria-label="Primary Sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+
+  <section class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <ul>
+      {% for post in site.posts limit:3 %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+</aside>

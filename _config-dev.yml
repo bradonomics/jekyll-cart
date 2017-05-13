@@ -1,0 +1,6 @@
+# Site settings
+url: http://localhost:3000
+
+# SASS settings
+sass:
+  style: expanded

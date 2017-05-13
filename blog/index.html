@@ -1,0 +1,65 @@
+---
+title: Blog
+description:
+facebook_image_path:
+layout: default
+---
+
+<div class="site-inner">
+  <div class="wrap">
+    <div class="content-sidebar-wrap">
+
+      <main class="content">
+
+        <article class="page">
+
+          <div class="archive-description">
+            <h1 class="archive-title">{{ page.title }}</h1>
+            {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+          </div>
+
+          {% for post in paginator.posts %}
+
+          <article class="post entry" itemscope itemtype="http://schema.org/CreativeWork">
+
+            <header class="entry-header">
+              <h1 class="entry-title" itemprop="headline"><a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a></h1>
+              <p class="entry-meta">
+                <time class="entry-time" itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+              </p>
+            </header>
+
+            <div class="entry-content" itemprop="text">
+              {% if post.featured_image_path %}<a class="entry-image-link" href="{{ post.url }}" aria-hidden="true"><img width="1024" height="682" src="{{ post.featured_image_path }}" class="post-image entry-image" alt="{{ post.title }}" itemprop="image"></a>{% endif %}
+              <p>{{ post.content | strip_html | strip | truncate: 440 }}&#x02026;</p>
+              <p><a class="more-link" href="{{ post.url }}">Continue Reading</a></p>
+            </div>
+
+          </article>
+
+          {% endfor %}
+
+          <!-- Pagination links -->
+          {% if paginator.total_pages > 1 %}
+          <div class="archive-pagination pagination">
+            <ul>
+              {% if paginator.previous_page %}
+              <li><a href="{{ paginator.previous_page_path | replace: '//', '/' }}">&laquo; Prev Page</a></li>
+              {% endif %} {% for page in (1..paginator.total_pages) %} {% if page == paginator.page %}
+              <li class="active">{{ page }}</li>
+              {% elsif page == 1 %}
+              <li><a href="{{ site.url }}/blog/">{{ page }}</a></li>
+              {% else %}
+              <li><a href="{{ site.paginate_path | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+              {% endif %} {% endfor %} {% if paginator.next_page %}
+              <li><a href="{{ paginator.next_page_path | replace: '//', '/' }}">Next Page &raquo;</a></li>
+              {% endif %}
+            </ul>
+          </div>
+          {% endif %}
+
+        </article>
+
+    </div>
+  </div>
+</div>

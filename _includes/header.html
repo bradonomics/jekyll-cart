@@ -1,0 +1,19 @@
+<header class="site-header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="wrap">
+
+    <div class="title-area">
+      <h1 class="site-title" itemprop="headline"><a href="/">{{ site.title }}</a></h1>
+    </div>
+
+    {% include navigation.html %}
+
+    <nav class="nav-secondary mobile-show" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Secondary navigation">
+      <ul class="jekyll-nav-menu">
+        <li class="menu-item">
+          <a href="/cart/" id="cart-menu">Cart <span class="fa fa-shopping-cart"></span> (<span class="simpleCart_quantity"></span>)</a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</header>

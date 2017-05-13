@@ -1,0 +1,210 @@
+/* Navigation
+-------------------------------------------------- */
+.nav-primary {
+  display: none;
+  width: 100%;
+
+  @media (min-width: 800px) {
+    display: block;
+    text-align: right;
+  }
+}
+
+.jekyll-nav-menu {
+
+  .menu-item {
+  	display: inline-block;
+    position: relative;
+    width: 100%;
+  	list-style: none;
+    @media (min-width: 800px) {
+      width: inherit;
+    }
+
+    a {
+      display: block;
+      position: relative;
+    	margin: 0;
+    	padding: 10px 0;
+      border: 0;
+      font-weight: 400;
+      letter-spacing: .05em;
+      text-decoration: none;
+    	text-transform: uppercase;
+      color: $secondary-color;
+      -webkit-transition: all .2s ease-in-out;
+         -moz-transition: all .2s ease-in-out;
+          -ms-transition: all .2s ease-in-out;
+           -o-transition: all .2s ease-in-out;
+              transition: all .2s ease-in-out;
+      @media (min-width: 800px) {
+        margin: 0 0 0 24px;
+        padding: 15px 0;
+        font-size: 12px;
+      }
+      @media (min-width: 1000px) {
+        margin: -2px 0 0 36px;
+      }
+    }
+
+    a:hover,
+    &.active > a {
+      color: $primary-color;
+      opacity: 1;
+    }
+
+    &.highlight a {
+      @media (min-width: 800px) {
+        padding: 10px 20px;
+        border: 1px solid $secondary-color;
+        border-radius: 2px;
+        line-height: 1;
+        background: transparent;
+      }
+    }
+
+    &:hover .sub-menu {
+      @media (min-width: 800px) {
+        display: block;
+      }
+    }
+
+  }
+
+  .cart {
+    display: none;
+    position: absolute;
+    visibility: hidden;
+    clip: rect(0, 0, 0, 0);
+    @media (min-width: 800px) {
+      display: inline-block;
+      position: relative;
+      visibility: visible;
+    }
+  }
+
+}
+
+.sub-menu {
+  display: none;
+  width: calc(100% - 24px);
+	margin: 0 0 0 24px;
+  @media (min-width: 800px) {
+    position: absolute;
+		width: 180px;
+    margin-top: -12px;
+    border-radius: 2px;
+		text-align: left;
+    background: $secondary-color;
+    z-index: 99;
+  }
+
+  .menu-item {
+    @media (min-width: 800px) {
+      width: 100%;
+    }
+
+    a {
+      @media (min-width: 800px) {
+        width: 100%;
+        margin: 0;
+        padding: 8px 16px;
+        border-top: 0;
+        color: #fff;
+      }
+
+    }
+
+  }
+
+  .menu-item:first-child > a {
+    @media (min-width: 800px) {
+      padding-top: 16px;
+    }
+  }
+
+  .menu-item:last-child a {
+    @media (min-width: 800px) {
+      padding-bottom: 12px;
+    }
+  }
+
+}
+
+
+/* Responsive Menu
+-------------------------------------------------- */
+
+.menu-toggle {
+  display: block;
+  position: relative;
+  float: right;
+  width: 50px;
+  height: 50px;
+  margin-top: -5px;
+  margin-right: -12px;
+  padding: 6px 2px 0;
+  text-indent: 9999px;
+  color: transparent;
+  background: none;
+  box-shadow: none;
+  overflow: hidden;
+  visibility: visible;
+  @media (min-width: 800px) {
+  	display: none;
+  	visibility: hidden;
+  }
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:before {
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    right: 13px;
+    margin: 0 auto;
+    padding: 0;
+    font: normal 30px/1.5 'FontAwesome';
+    color: $secondary-color;
+    content: '\f0c9';
+  }
+
+  &.activated::before {
+    right: 16px;
+    content: '\f00d';
+  }
+
+}
+
+.sub-menu-toggle {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  padding: 6px 2px 0;
+  background: transparent;
+  visibility: visible;
+  @media (min-width: 800px) {
+  	display: none;
+  	visibility: hidden;
+  }
+
+  &:hover {
+		box-shadow: none;
+	}
+
+  &:before {
+    padding: 14px 5px;
+    font: normal 16px/1 'FontAwesome';
+    color: $secondary-color;
+    content: '\f078';
+    cursor: pointer;
+  }
+
+  &.activated::before {
+    content: '\f077';
+  }
+
+}

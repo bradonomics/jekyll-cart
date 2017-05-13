@@ -1,0 +1,120 @@
+/* Buttons
+-------------------------------------------------- */
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'],
+.button {
+  display: inline-block;
+  width: auto;
+  padding: 14px 30px;
+  border: 0;
+  border-radius: 2px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.612;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+  background-color: $primary-color;
+  -webkit-transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+      -ms-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+  &:hover {
+    text-decoration: none;
+    box-shadow: inset 0 0 0 200px rgba(0, 0, 0, .1);
+    opacity: 1;
+  }
+
+}
+
+.button:after,
+.button:before {
+  -webkit-transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+      -ms-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+
+.button.small {
+  padding: 8px 20px;
+  font-size: 14px;
+}
+
+.button.light {
+  color: $secondary-color;
+  background: #eee;
+}
+
+.bg-primary .button.light,
+.bg-secondary .button.light {
+  color: #fff;
+  background: rgba(255, 255, 255, .2);
+
+  &:hover {
+    box-shadow: inset 0 0 0 200px rgba(255, 255, 255, .2);
+  }
+
+}
+
+.button.full-width {
+  display: block;
+  width: 100%;
+}
+
+.button.minimal {
+  color: $primary-color;
+  background: transparent;
+}
+
+.button.minimal:hover {
+  box-shadow: none;
+}
+
+.button.white {
+  color: $primary-color;
+  background: #fff;
+}
+
+.button.arrow-left:before,
+.button.arrow-right:after {
+  font-family: 'FontAwesome';
+  vertical-align: top;
+}
+
+.button.arrow-right:after {
+  margin-left: 8px;
+  content: '\f061';
+}
+
+.button.arrow-right:hover:after {
+  margin-right: -4px;
+  margin-left: 12px;
+}
+
+.button.arrow-left:before {
+  margin-right: 8px;
+  content: '\f060';
+}
+
+.button.arrow-left:hover:before {
+  margin-right: 12px;
+  margin-left: -4px;
+}
+
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button {
+  display: none;
+}

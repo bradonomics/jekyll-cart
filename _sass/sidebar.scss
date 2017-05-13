@@ -1,0 +1,31 @@
+/* Sidebar
+-------------------------------------------------- */
+
+.sidebar {
+  @media (min-width: 1000px) {
+    float: right;
+    width: 25%;
+  }
+
+  .widget {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #f2f2f2;
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    ul li {
+      margin-bottom: 16px;
+      list-style-type: none;
+    }
+
+  }
+
+  .widget-title {
+    font-size: 16px;
+  }
+
+}

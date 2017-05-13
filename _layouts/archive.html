@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<div class="site-inner">
+  <div class="wrap">
+    <div class="content-sidebar-wrap">
+
+      <main class="content">
+
+        <article class="page">
+
+          <div class="archive-description">
+            <h1 class="archive-title">
+              {{ page.title }}
+              {% if page.type == 'category' %} Category Archives{% endif %}
+              {% if page.type == 'tag' %} Tag Archives{% endif %}
+            </h1>
+          </div>
+
+          {% for post in page.posts %}
+
+          <article class="post entry" itemscope itemtype="http://schema.org/CreativeWork">
+
+            <header class="entry-header">
+              <h1 class="entry-title" itemprop="headline"><a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a></h1>
+              <p class="entry-meta">
+                <time class="entry-time" itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+              </p>
+            </header>
+
+            <div class="entry-content" itemprop="text">
+              {% if post.featured_image_path %}<a class="entry-image-link" href="{{ post.url }}" aria-hidden="true"><img width="1024" height="682" src="{{ post.featured_image_path }}" class="post-image entry-image" alt="{{ post.title }}" itemprop="image"></a>{% endif %}
+              <p>{{ post.content | strip_html | strip | truncate: 440 }}&#x02026;</p>
+              <p><a class="more-link" href="{{ post.url }}">Continue Reading</a></p>
+            </div>
+
+          </article>
+
+          {% endfor %}
+
+        </article>
+
+    </div>
+  </div>
+</div>

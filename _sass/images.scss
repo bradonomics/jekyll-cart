@@ -1,0 +1,79 @@
+/* Images
+-------------------------------------------------- */
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+a.aligncenter img {
+  display: block;
+  margin: 0 auto;
+}
+
+a.alignnone {
+  display: inline-block;
+}
+
+.alignnone,
+.aligncenter,
+.alignleft,
+.alignright {
+  border: 0;
+}
+
+.alignleft {
+  float: left;
+  text-align: left;
+}
+
+.alignright {
+  float: right;
+  text-align: right;
+}
+
+img.centered,
+.aligncenter {
+  display: block;
+  margin: 0 auto 30px;
+}
+
+img.alignnone,
+.alignnone {
+  margin-bottom: 12px;
+}
+
+a.alignleft,
+img.alignleft {
+  margin: 0 60px 30px 0;
+}
+
+a.alignright,
+img.alignright {
+  margin: 0 0 30px 60px;
+}
+
+img.alignleft.entry-image,
+img.alignright.entry-image {
+  margin-bottom: 0;
+}
+
+.entry-content figure {
+  margin: 60px 0 50px;
+}
+
+// .wp-caption {
+//   max-width: 100%;
+// }
+//
+// .wp-caption-text {
+//   font-size: 16px;
+//   font-size: 1.6rem;
+//   font-weight: 700;
+//   text-align: center;
+// }
+//
+// .entry-content p.wp-caption-text {
+//   margin-bottom: 0;
+// }

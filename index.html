@@ -1,0 +1,43 @@
+---
+title: Jekyll Cart Products
+description: Products displayed on the homepage.
+sidebar_option: 'no-sidebar'
+featured_image_path:
+facebook_image_path:
+layout: default
+---
+
+<div class="site-inner">
+  <div class="wrap">
+    <div class="content-sidebar-wrap">
+
+      <main class="content grid">
+        {% for product in site.products %}
+          <section class="entry one-third styles" itemscope itemtype="http://schema.org/Product">
+
+            {% for style in product.styles %}
+          		<div class="style"{% unless forloop.first %} style="display: none"{% endunless %}>
+          			<a href="{{ product.url }}">
+          				<img src="{{ style.image_path }}" itemprop="image">
+          			</a>
+          		</div>
+          	{% endfor %}
+
+            <div class="product-details">
+              <div class="product-name">
+			          <h4><a href="{{ product.url }}">{{ product.title }}</a></h4>
+              </div>
+              <div class="product-price">
+							  <p>&#3647;{{ product.price }}</p>
+              </div>
+						</div>
+
+          </section>
+        {% endfor %}
+      </main>
+
+      {% if page.sidebar_option == 'sidebar' %}{% include sidebar.html %}{% endif %}
+
+    </div>
+  </div>
+</div>

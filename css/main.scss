@@ -1,0 +1,55 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import
+  'variables',
+  'normalize',
+  'reset',
+  // 'fonts',
+  // 'fontawesome',
+  'base',
+  'buttons',
+  'forms',
+  'tables',
+  'structure',
+  'grid',
+  'header',
+  'headings',
+  'navigation',
+  'article',
+  'images',
+  'home',
+  'archive',
+  'product',
+  'cart',
+  'widgets',
+  'pagination',
+  'sidebar',
+  '404',
+  'subscribe',
+  'footer-widgets',
+  'footer'
+;
+
+/* Media Queries
+-------------------------------------------------- */
+/* Larger than mobile */
+// @media (min-width: 400px) {
+// }
+
+/* Larger than phablet (point when 2-column grid becomes active) */
+// @media (min-width: 550px) {
+// }
+
+/* Larger than tablet (point when 3-column grid becomes active) */
+// @media (min-width: 750px) {
+// }
+
+/* Larger than desktop (point when 4-column grid becomes active) */
+// @media (min-width: 1000px) {
+// }
+
+/* Larger than Desktop HD */
+// @media (min-width: 1200px) {
+// }

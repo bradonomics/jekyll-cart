@@ -1,0 +1,26 @@
+---
+title: Contact
+emails:
+  - info@your-domain.com
+  - sales@your-domain.com
+description:
+facebook_image_path:
+---
+
+<p class="editable">We'd love to hear from you.</p>
+
+<form method="post" action="{{ site.url }}">
+  <label>Name</label>
+  <input type="text" name="name" required>
+
+  <label>Email</label>
+  <input type="text" name="email" required>
+
+  <label>Message</label>
+  <textarea name="message" required></textarea>
+
+  <input type="hidden" value="{{ page.emails | join: ',' }}" name="_to">
+  <input type="text" style="display: none;" name="_gotcha">
+
+  <input type="submit" value="Send Message">
+</form>

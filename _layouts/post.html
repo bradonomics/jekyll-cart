@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="site-inner">
+  <div class="wrap">
+    <div class="content-sidebar-wrap">
+
+      <main class="content">
+        <article class="post entry" itemscope itemtype="http://schema.org/CreativeWork">
+
+          <header class="entry-header">
+            <h1 class="entry-title" itemprop="headline">{{ page.title }}</h1>
+            <p class="entry-meta">
+              <time class="entry-time" itemprop="datePublished" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+            </p>
+          </header>
+
+          <div class="entry-content" itemprop="text">
+            {{ content }}
+          </div>
+
+          {% if page.categories != empty or page.tags != empty %}
+            <footer class="entry-footer">
+              <p class="entry-meta">{% include post-taxonomies.html %}</p>
+            </footer>
+          {% endif %}
+
+        </article>
+      </main>
+
+      {% if page.sidebar_option == 'sidebar' %}{% include sidebar.html %}{% endif %}
+
+    </div>
+  </div>
+</div>

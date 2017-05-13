@@ -1,0 +1,27 @@
+.widget {
+  word-wrap: break-word;
+
+  ol > li {
+    padding-left: 20px;
+    text-indent: -20px;
+    list-style-position: inside;
+    list-style-type: decimal;
+  }
+
+  li.current-menu-item a {
+    border: 0;
+    color: $secondary-color;
+  }
+
+  li li {
+    margin: 0 0 0 30px;
+    padding: 0;
+    border: 0;
+  }
+
+}
+
+.widget-area ul li {
+  margin-bottom: 16px;
+  list-style-type: none;
+}

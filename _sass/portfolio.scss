@@ -1,0 +1,115 @@
+/* Portfolio
+-------------------------------------------------- */
+
+.portfolio-archive .site-inner > .wrap {
+  max-width: 100%;
+  padding: 0;
+}
+
+.portfolio-archive .content-sidebar-wrap {
+  width: 100%;
+}
+
+.portfolio-archive .archive-description {
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 5%;
+}
+
+.portfolio-archive .archive-description > * {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.portfolio-featured-image img {
+  display: block;
+  width: 100%;
+}
+
+.portfolio {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px !important;
+  padding: 0;
+  @media (min-width: 800px) {
+    width: calc(33.33% - 20px);
+    margin: 0 10px;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  &:hover .entry-header {
+    @media (min-width: 800px) {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+
+  &:hover:after {
+    @media (min-width: 800px) {
+      opacity: 1;
+    }
+  }
+
+  &:after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .5) 100%); /* Firefox 3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .5) 100%); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .5) 100%); /* W3C, IE10+, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    content: ' ';
+    z-index: 2;
+    pointer-events: none;
+    @media (min-width: 800px) {
+      -webkit-transition: opacity .2s ease-in-out;
+         -moz-transition: opacity .2s ease-in-out;
+          -ms-transition: opacity .2s ease-in-out;
+              transition: opacity .2s ease-in-out;
+      opacity: 0;
+    }
+  }
+
+  a {
+    display: block;
+    margin: 0;
+    border: 0;
+  }
+
+  .entry-header {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    z-index: 3;
+    @media (min-width: 800px) {
+      bottom: -15%;
+      -webkit-transition: all opacity .2s ease-in;
+         -moz-transition: all opacity .2s ease-in;
+          -ms-transition: all opacity .2s ease-in;
+              transition: all .2s ease-in-out;
+      opacity: 0;
+    }
+  }
+
+  .entry-header .entry-title {
+    margin: 20px 0 0;
+    padding: 0;
+    border: 0;
+    font-size: 20px;
+    word-wrap: break-word;
+  }
+
+  .entry-header a {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+  }
+
+}

@@ -1,0 +1,117 @@
+/* Entries
+-------------------------------------------------- */
+
+.entry {
+  margin-bottom: 1em;
+}
+
+.entry.page {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+}
+
+.single-post .entry {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.entry-title a {
+  border: 0;
+  color: $secondary-color;
+}
+
+.entry-content ol,
+.entry p,
+.entry-content p,
+.textwidget p,
+.entry-content ul,
+.entry ul,
+.entry ol,
+.entry-content .video-player,
+.quote-caption {
+  margin-bottom: 2rem;
+  line-height: 2;
+}
+
+.entry-content ol,
+.entry ol,
+.entry-content ul,
+.entry ul {
+  margin-left: 40px;
+}
+
+// .single .entry-content p.intro:after,
+// .page .entry-content p.intro:after {
+//   display: block;
+//   margin: 40px auto;
+//   border-bottom: 1px solid #f2f2f2;
+//   content: ' ';
+// }
+
+.post-image.entry-image {
+  margin-bottom: 40px;
+}
+
+.entry-content ol li,
+.entry ol li {
+  list-style-type: decimal;
+}
+
+.entry-content ul li,
+.entry ul li {
+  list-style-type: disc;
+}
+
+.entry-content ol ol,
+.entry ol ol,
+.entry-content ul ul,
+.entry ul ul {
+  margin-bottom: 0;
+}
+
+.entry-content ul.list-unstyled,
+.entry-content ol.list-unstyled {
+  margin-left: 20px;
+}
+
+.entry-content ul.list-unstyled > li,
+.entry-content ol.list-unstyled > li {
+  list-style: none;
+}
+
+.entry-meta {
+  font-size: 18px;
+
+  span {
+    display: block;
+  }
+
+}
+
+.entry-meta,
+.comment-meta {
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+p.intro {
+  display: block;
+  font-family: $tertiary-font-family;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 2;
+  @media only screen and (min-width: 1024px) {
+    font-size: 25px;
+  }
+}
+
+hr,
+.clear-line {
+  width: 100%;
+  margin: 0 0 40px;
+  padding: 40px 0 0;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}

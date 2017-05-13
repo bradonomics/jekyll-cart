@@ -1,0 +1,13 @@
+.simplecart-total {
+  margin-bottom: 20px;
+  text-align: center;
+
+  @media (min-width: 800px) {
+    text-align: right;
+  }
+
+  p {
+    display: inline;
+  }
+
+}

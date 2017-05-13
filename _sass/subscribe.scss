@@ -1,0 +1,26 @@
+.subscribe {
+  margin-bottom: 100px;
+  padding-top: 100px;
+
+  form {
+    text-align: center;
+  }
+
+  input {
+    @media (min-width: 800px) {
+      float: left;
+      width: calc(33.33% - 10px);
+      height: 52px;
+      margin: 5px;
+    }
+
+    &[type='submit'] {
+      width: 100%;
+      @media (min-width: 800px) {
+        width: calc(33.33% - 10px);
+      }
+    }
+
+  }
+
+}

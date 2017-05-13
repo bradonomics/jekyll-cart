@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+<div class="site-inner">
+  <div class="wrap">
+    <div class="content-sidebar-wrap">
+
+      <main class="content single-product simpleCart_shelfItem" itemscope itemtype="http://schema.org/Product">
+
+        <section class="product-image">
+          <div class="styles">
+            {% for style in page.styles %}
+          		<div id="product-{{ forloop.index }}" class="style" {% unless forloop.first %}style="display: none"{% endunless %}>
+        				<img src="{{ style.image_path }}" itemprop="image">
+          		</div>
+          	{% endfor %}
+          </div>
+        </section>
+
+        <section class="product-details">
+          <h1 class="entry-title item_name" itemprop="name">{{ page.title }}</h1>
+          <p class="item_price">{{ page.price }}</p>
+          <p>{{ content }}</p>
+
+        	<div class="style-picker">
+            <p class="margin-bottom-0">Color:</p>
+            {% for style in page.styles %}
+              <div id="product-{{ forloop.index }}"{% if forloop.first %} class="item_color"{% endif %} style="background-color: {{ style.color }}"><span class="display-none">{{ style.name }}</span></div>
+            {% endfor %}
+        	</div>
+
+          <p class="margin-bottom-0">Size:</p>
+          <select class="item_size">
+            {% for size in page.sizes %}
+              <option value="{{ size }}"> {{ size }} </option>
+            {% endfor %}
+          </select>
+
+          <p class="margin-bottom-0">Quantity:</p>
+          <select class="item_Quantity">
+            <option value="1"> 1 </option>
+            <option value="2"> 2 </option>
+            <option value="3"> 3 </option>
+            <option value="4"> 4 </option>
+            <option value="5"> 5 </option>
+            <option value="6"> 6 </option>
+            <option value="7"> 7 </option>
+            <option value="8"> 8 </option>
+          </select>
+
+          <a id="item_add" class="item_add button" href="javascript:;"> Add to Cart </a></span>
+        </section>
+
+      </main>
+
+    </div>
+  </div>
+</div>
