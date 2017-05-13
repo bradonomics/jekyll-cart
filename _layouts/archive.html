@@ -23,16 +23,16 @@ layout: default
           <article class="post entry" itemscope itemtype="http://schema.org/CreativeWork">
 
             <header class="entry-header">
-              <h1 class="entry-title" itemprop="headline"><a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a></h1>
+              <h1 class="entry-title" itemprop="headline"><a href="{{ site.url }}{{ post.url }}" rel="bookmark">{{ post.title }}</a></h1>
               <p class="entry-meta">
                 <time class="entry-time" itemprop="datePublished" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
               </p>
             </header>
 
             <div class="entry-content" itemprop="text">
-              {% if post.featured_image_path %}<a class="entry-image-link" href="{{ post.url }}" aria-hidden="true"><img width="1024" height="682" src="{{ post.featured_image_path }}" class="post-image entry-image" alt="{{ post.title }}" itemprop="image"></a>{% endif %}
+              {% if post.featured_image_path %}<a class="entry-image-link" href="{{ site.url }}{{ post.url }}" aria-hidden="true"><img width="1024" height="682" src="{{ site.url }}{{ post.featured_image_path }}" class="post-image entry-image" alt="{{ post.title }}" itemprop="image"></a>{% endif %}
               <p>{{ post.content | strip_html | strip | truncate: 440 }}&#x02026;</p>
-              <p><a class="more-link" href="{{ post.url }}">Continue Reading</a></p>
+              <p><a class="more-link" href="{{ site.url }}{{ post.url }}">Continue Reading</a></p>
             </div>
 
           </article>

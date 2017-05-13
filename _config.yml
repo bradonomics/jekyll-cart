@@ -1,7 +1,7 @@
 # Site Settings
 title: Jekyll Cart
 description: A Jekyll Based Shopping Cart Built with simpleCart(js)
-url:
+url: https://bradonomics.github.io/jekyll-cart
 
 # Jekyll Configuration
 encoding: UTF-8

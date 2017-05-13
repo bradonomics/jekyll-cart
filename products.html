@@ -16,14 +16,14 @@ layout: default
           <section class="entry one-third styles" itemscope itemtype="http://schema.org/Product">
 
         		<div class="style">
-        			<a href="{{ product.url }}">
-        				<img src="{{ product.featured_image_path }}" itemprop="image">
+        			<a href="{{ site.url }}{{ product.url }}">
+        				<img src="{{ site.url }}{{ product.featured_image_path }}" itemprop="image">
         			</a>
         		</div>
 
             <div class="product-details">
               <div class="product-name">
-			          <h4><a href="{{ product.url }}">{{ product.title }}</a></h4>
+			          <h4><a href="{{ site.url }}{{ product.url }}">{{ product.title }}</a></h4>
               </div>
               <div class="product-price">
 							  <p>&#x24;{{ product.price }}</p>

@@ -12,7 +12,7 @@ layout: default
           <div class="styles">
             {% for style in page.styles %}
           		<div id="product-{{ forloop.index }}" class="style" {% unless forloop.first %}style="display: none"{% endunless %}>
-        				<img src="{{ style.image_path }}" itemprop="image">
+        				<img src="{{ site.url }}{{ style.image_path }}" itemprop="image">
           		</div>
           	{% endfor %}
           </div>
