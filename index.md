@@ -10,4 +10,4 @@ This is a starter kit for building an e-commerce site with [Jekyll](https://jeky
 
 Here is a video walk through of some of the features:
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/iRiY5Tpu_bU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/jdp_XmogTEo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
