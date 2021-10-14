@@ -1,6 +1,9 @@
 ---
 title: Checkout
 description:
+emails:
+  - info@your-domain.com
+  - sales@your-domain.com
 sitemap: false
 ---
 
@@ -20,7 +23,7 @@ sitemap: false
   <input type="text" name="State" placeholder="State">
   <input type="text" name="Zip Code" placeholder="Zip Code">
 
-  <input type="hidden" name="_to" value="brad@bradonomics.com,zine@webniyom.com">
+  <input type="hidden" name="_to" value="{{ page.emails | join: ',' }}">
   <input type="text" name="_gotcha" style="display: none;">
 
   <input type="submit" value="Send Order">
